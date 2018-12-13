@@ -36,7 +36,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node exserver.js"
+    "start": "node server.js"
   },
   "author": "tranthevu.iuh@gmail.com",
   "license": "ISC"
