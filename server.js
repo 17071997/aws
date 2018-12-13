@@ -301,7 +301,7 @@ io.on('connection', function (socket) {
     })
 });
 
-http.listen(8001, function () {
+http.listen(80, function () {
     /*
     let host = server.address().address;
     let port = server.address().port;*/
