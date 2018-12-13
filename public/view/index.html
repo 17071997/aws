@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width" />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,300,700'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="Stylesheet" href='https://fonts.googleapis.com/css?family=Muli' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,300italic,400italic,600italic,600' rel='stylesheet' type='text/css'>
+    <link rel="Stylesheet" href="css/master.css" type="text/css" />
+    <link rel="Stylesheet" href="https://ianlunn.github.io/Hover/css/hover.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="../CSS/slide.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        a{
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        .wrapper{
+            width:100%;
+            margin:30px auto 0;
+            background-color:#FFFFFF;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        header{
+            text-align:right;
+            padding:10px;
+            margin-bottom:10px;
+            background-color:#5DBA9D;
+        }
+
+        header a{
+            font-size:20px;
+            color:#FFFFFF;
+            width:40px;
+            height:40px;
+            line-height:40px;
+            margin-left:10px;
+            text-align:center;
+            display:inline-block;
+        }
+
+        header a:hover, .list-mode header a.hide-list:hover{
+            background-color:#11956c;
+        }
+
+        header a.hide-list{
+            background-color:#11956c;
+        }
+
+        .list-mode header a.hide-list{
+            background-color:#5DBA9D;
+        }
+
+        .list-mode header a.show-list{
+            background-color:#11956c;
+        }
+
+        .container:after{
+            content:"";
+            clear:both;
+            display:table;
+        }
+
+        .container{
+            padding:10px 0 10px 10px;
+        }
+
+        .wrapper .box{
+            float:left;
+            width:100px;
+            height:100px;
+            margin:0 10px 10px 0;
+            background-color:#CCCCCC;
+            -webkit-transition:all 1.0s ease;
+            -moz-transition:all 1.0s ease;
+            transition:all 1.0s ease;
+            transition:all 1.0s ease;
+        }
+
+        .wrapper.list-mode .container{
+            padding-right:10px;
+        }
+
+        .wrapper.list-mode .box{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+<div class="InnerBackGround">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/decorate">Trang trí</a></li>
+            <li><a href="/food">Đồ ăn</a></li>
+            <li><a href="/house">Nhà</a></li>
+            <li><a href="/origami">Origami</a></li>
+            <li class="nav-item"><a href="/login" target="_blank" class="btn btn-danger btn-round">Login</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="wrapper">
+    <header>
+        <a href="javascript:void(0)" class="show-list"><i class="fa fa-th-list"></i></a>
+        <a href="javascript:void(0)" class="hide-list"><i class="fa fa-th"></i></a>
+    </header>
+    <div class="container">
+        <div class="box">
+            <img src="" width="98px" height="98px"/>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</div>
+<script>
+    $('.show-list').click(function(){
+        $('.wrapper').addClass('list-mode');
+    });
+
+    $('.hide-list').click(function(){
+        $('.wrapper').removeClass('list-mode');
+    });
+    $(function(){
+        var header = $("nav"),
+            yOffset = 0,
+            triggerPoint = 150;
+        $(window).scroll(function(){
+            yOffset = $(window).scrollTop();
+
+            if(yOffset >= triggerPoint){
+                header.addClass("minimized");
+            }else{
+                header.removeClass("minimized");
+            }
+        });
+    });
+</script>
+</body>
+</html>
